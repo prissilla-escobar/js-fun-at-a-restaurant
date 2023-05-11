@@ -43,7 +43,6 @@ if (inStock < 20) {
     shouldOrderMore = false;
 } 
 
-console.log(inStock)
 console.log(shouldOrderMore)
 
 
@@ -58,6 +57,14 @@ console.log(shouldOrderMore)
 // Express the following in code: If the variable "stockCount" is greater or equal to 1, log
 // the statement 'I'm going to eat some [food]!', otherwise, log the statement 
 // 'We need to get some more [food].'
+food = "enchiladas"
+stockCount = 1
+
+if (stockCount >= 1) {
+    console.log(`I'm going to eat some ${food}chips!`)
+} else {
+    console.log(`We need to get some more ${food}.`)
+}
 
 
 
@@ -66,6 +73,14 @@ console.log(shouldOrderMore)
 // statement 'I recently ate [food]'. In either case, the value stored in
 // the "food" variable should be included in the logged statement.
 
+food = "teriyaki chicken"
+isFavorite = false
+
+if (isFavorite === true) {
+    console.log(`My favorite ${food} is chips!`)
+} else {
+    console.log(`I recently ate ${food}.`)
+}
 
 
 //------------------------- Arrays -------------------------//
