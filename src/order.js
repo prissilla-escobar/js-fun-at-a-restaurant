@@ -1,7 +1,29 @@
 
+function takeOrder(order, deliveryOrders) {
+  if (deliveryOrders.length < 3)
+   deliveryOrders.push(order)
+}
+
+function refundOrder(orderNumber, deliveryOrders) {
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    if (deliveryOrders[i].orderNumber === orderNumber) {
+      deliveryOrders.splice(i, 1)
+    }
+  }
+}
+
+function listItems(deliveryOrders) {
+  var newArray = []
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    newArray.push(deliveryOrders[i].item)
+  }
+ return newArray.join(', ')
+}
+
+
 module.exports = {
-  // takeOrder,
-  // refundOrder,
-  // listItems,
+  takeOrder,
+  refundOrder,
+  listItems,
   // searchOrder
 }
