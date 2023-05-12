@@ -21,7 +21,7 @@ describe("meal.js", function() {
       assert.equal(menuItemName, "Delicious Pizza");
     });
 
-    it.skip("should be able to create many delicious titles", function () {
+    it("should be able to create many delicious titles", function () {
       var burritoItem = nameMenuItem("Burrito");
       var sushiItem = nameMenuItem("Pizza");
       var tacoItem = nameMenuItem("Taco");
