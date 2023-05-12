@@ -4,35 +4,34 @@ return `Delicious ${name}`
 
 function createMenuItem(name, price, type) {
   var menuItem = {
-    name: "Delicious French Toast",
-    price: 10.99,
-    type: "breakfast",
+    name: name,
+    price: price,
+    type: type,
   }
   return menuItem
 }
 
 function addIngredients(food, ingredients) {
-  return [ingredients.push(food)]  
-  }
+  if (ingredients.includes(food) !== true)
+  return ingredients.push(food)
+}
 
 
-function formatPrice(newPrice) {
-  return (`$${newPrice}`)
+function formatPrice(price) {
+  return `$${price}`
 
 }
 
-function decreasePrice(decreasedPrice, price) {
-  return (decreasedPrice*.9)
+function decreasePrice(price) {
+  return `${price}` * .9
 }
 
-function createRecipe(recipe, ingredients, type) {
-  var recipe = {
-    recipe: menuItem.name,
+function createRecipe(title, ingredients, menuItemType) {
+  return {
+    title: title,
     ingredients: ingredients,
-    type: type
-
+    type: menuItemType,
   }
-  return recipe
 }
 
 module.exports = {
